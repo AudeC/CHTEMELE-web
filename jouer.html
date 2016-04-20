@@ -1,0 +1,250 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CHTEMELE</title>
+
+
+<link href='https://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+
+<script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/cartes.js"></script>
+<script type="text/javascript" src="js/script_mode_score_7.js"></script>
+<script type="text/javascript" src="js/script_mode_histoire.js"></script>
+
+
+
+</head>
+<body>
+
+<header>
+	<div  class="logo col-md-5"> 
+		<img class="img-responsive" src = "images/logo_chtemele_blanc.png "  alt = "..." data-toggle="tooltip" data-placement="bottom" title="Ça, c'est le logo du jeu :)" />
+	</div>
+	
+	<div  class = "col-md-6"> 
+		<h5 class="score col-sm-4 col-md-12">Votre score : <b>0</b></h5>
+		<h5 class="btn btn-primary btn-lg" data-toggle="tooltip" data-placement="bottom" title="Tout savoir sur la pose des cartes!" class="btn btn-lg btn-primary piocher"><span  data-toggle="modal" data-target="#modal_regles" class="font-normal">Règles</span></h5>
+		<h5 data-toggle="tooltip" data-placement="bottom" title="Ajoute une nouvelle carte dans votre main" class="btn btn-lg btn-primary piocher font-normal">Piocher</h5>
+		<h5 data-toggle="tooltip" data-placement="bottom" title="Apprenez les rudiments du CHTEMELE... et du HTML !" class="tuto btn-lg btn btn-primary font-normal">Tutoriel</h5>
+		<h5 data-toggle="tooltip" data-placement="bottom" title="Attention, vous perdrez votre partie active!" class="btn-lg btn btn-primary" id="reco_b"><a href="jouer.html">Recommencer</a></h5>
+	</div>
+		
+</header>
+
+	<div class="col-md-5" id="code">
+		<div  class = "ligne"  data-ligne="1">
+			<h2>1</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne"  data-ligne="2">
+			<h2>2</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne"  data-ligne="3">
+			<h2>3</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne"  data-ligne="4">
+			<h2>4</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne" data-ligne="5">
+			<h2>5</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne"  data-ligne="6">
+			<h2>6</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne"  data-ligne="7">
+			<h2>7</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne"  data-ligne="8">
+			<h2>8</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne"  data-ligne="9">
+			<h2>9</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+		<div  class = "ligne"  data-ligne="10">
+			<h2>10</h2>
+			<div class="carre carte-drop"> 
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-md-2" id="container_cartes">
+		<div id="cartes"></div>
+		<img data-toggle="tooltip" data-placement="bottom" title="Faites glisser une carte sur la défausse pour l'enlever ! (ou faites CTRL+click sur une carte)" class="poubelle" src="images/poubelle.png">
+	</div>
+	
+	<div class="col-md-5">
+		<div  class = "css"> 
+			<ul class="nav nav-tabs"  data-toggle="tooltip" data-placement="bottom" title="Vous pouvez changer le style de votre code en changeant d'onglet " >
+			  <li role="css" class="active css1"><a href="#">CSS1</a></li>
+			  <li role="css" class="css2"><a href="#">CSS2</a></li>
+			  <li role="css" class="css3"><a href="#">CSS3</a></li>
+			</ul>
+		</div>
+		<div id="preview">
+			Bienvenue dans le CHTEMELE ! 
+			<br /><br />
+			Si vous débutez, n'hésitez pas à découvrir le jeu grâce à notre <b>tutoriel</b> (qui vous donnera également une initiation sommaire au langage HTML) ou bien à lire les <b>règles</b> du jeu qui vous permettront de rentrer dans les détails.<br />
+			Lorsque vous aurez posé la première carte, ce texte sera remplacé par la visualisation en direct de votre code. N'hésitez pas à utiliser les boutons de <b>CSS</b> pour changer la mise en page. 
+		</div>
+	</div>
+
+
+<!-- Modal de modification d'attribut  -->
+<div class="modal fade" id="modal_attr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Changez la valeur de l'attribut</h4>
+      </div>
+	   <form>
+      <div class="modal-body">
+       
+			 <div class="form-group">
+			<input type="text"class="form-control"  id="new_attr" name="attr" required="required" placeholder="Ecrivez ici" />
+			</div>
+		
+      </div>
+      <div class="modal-footer">
+			<button id="valider_attr" class="btn btn-primary">Valider</button>
+      </div>
+	  </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Modal de choix d'image -->
+<div class="modal fade" id="modal_img" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Choisissez une source pour l'image</h4>
+      </div>
+	   <form>
+      <div class="modal-body">
+       
+		
+		
+      </div>
+      <div class="modal-footer">
+		
+      </div>
+	  </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<!-- MODAL DU TUTORIEL -->
+<div class="modal fade" id="modal_tuto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Tutoriel</h4>
+      </div>
+	   <form>
+      <div class="modal-body">
+       
+		
+		
+      </div>
+     <div class="modal-footer">
+	 <button id="valider_tuto" class="btn btn-primary"  data-dismiss="modal" aria-label="Close">Continuer !</button>
+	 <button data-toggle="tooltip" data-placement="top" title="Vous pourrez reprendre à tout moment en cliquant sur le bouton « Afficher le tutoriel »"  id="arreter_tuto" class="btn btn-default"  data-dismiss="modal" aria-label="Close">Mettre fin au tutoriel</button>
+			
+      </div>
+	  </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+	
+<!-- MODAL DES REGLES -->
+<div class="modal fade" id="modal_regles" tabindex="-1" role="dialog" aria-labelledby="modal_regles">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Règles du jeu</h4>
+      </div>
+	   <form>
+      <div class="modal-body">
+		<ol>
+			<li>Toujours commencer son code par la carte &lt;html&gt;.</li>
+			<li>Toujours fermer une balise ouvrante par la balise fermante correspondante.</li>
+			<li>Les attributs doivent être joués après des balises ouvrantes ou indépendantes. Plusieurs attributs peuvent être posés à la suite.</li>
+			<li>L’attribut href doit être précédé de la carte balise ouvrante &lt;a&gt;.</li>
+			<li>L’attribut src doit être précédé de la carte balise indépendante &lt;img /&gt;.</li>
+			<li>A chaque carte posée, vous gagnez le nombre de points inscrit sur la carte en question.</li>
+			<li>Poser une carte ipsum après une carte lorem vous fera gagner 1 point bonus.</li>
+			<li>Fermer une balise vous fera gagner un nombre de points égal à la somme des points des cartes entre cette carte balise fermante et la carte balise ouvrante correspondante.</li>
+			<li>Pour fermer une balise, vous devez avoir fermé toutes les balises qui se trouvent à l'intérieur (Par exemple, &lt;h1&gt;&lt;a&gt;&lt;/h1&gt; est impossible, il faut d'abord poser &lt;/a&gt;).</li>
+			<li>La partie se termine en posant la carte &lt;/html&gt; après avoir fermé toutes les balises.</li>
+		</ol>
+      </div>
+     <div class="modal-footer">
+			<button id="valider_tuto" class="btn btn-primary"  data-dismiss="modal" aria-label="Close">Compris !</button>
+      </div>
+	  </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- MODAL DE MESSAGES DIVERS ET VARIÉES -->
+<div class="modal fade" id="modal_divers" tabindex="-1" role="dialog" aria-labelledby="modal_regles">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Message du jeu</h4>
+      </div>
+	   <form>
+      <div class="modal-body">
+       Contenu ici.
+		
+		
+      </div>
+     <div class="modal-footer">
+			<button class="btn btn-primary"  data-dismiss="modal" aria-label="Close">Fermer</button>
+      </div>
+	  </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->		
+
+</body>
+</html>
